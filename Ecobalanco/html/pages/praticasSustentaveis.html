@@ -270,59 +270,101 @@
 
     <!-- Agua -->
     <section class="m-5">
-      <h1 class="text-center text">- DESPERDÍCIO, + ECONOMIA</h1>
-      <!-- Container principal -->
+      <h1 class="text-center text-success">- DESPERDÍCIO, + ECONOMIA</h1>
       <div class="container my-5 d-flex flex-wrap justify-content-center gap-4">
-        <!-- Divs com emoji relacionadas à água -->
-        <div class="emoji-box" onclick="openContent('agua1')">🚿</div>
-        <div class="emoji-box" onclick="openContent('agua2')">🪥</div>
-        <div class="emoji-box" onclick="openContent('agua3')">🧼</div>
-        <div class="emoji-box" onclick="openContent('agua4')">💦</div>
+        <div class="emoji-box-agua" onclick="abrirConteudoAgua('agua1')">
+          🚿
+        </div>
+        <div class="emoji-box-agua" onclick="abrirConteudoAgua('agua2')">
+          🪥
+        </div>
+        <div class="emoji-box-agua" onclick="abrirConteudoAgua('agua3')">
+          🧼
+        </div>
+        <div class="emoji-box-agua" onclick="abrirConteudoAgua('agua4')">
+          💦
+        </div>
       </div>
 
-      <!-- Overlay de fundo embaçado -->
-      <div id="overlay" class="overlay d-none">
-        <!-- Conteúdo de cada dica -->
-        <div id="agua1" class="content-box d-none">
-          <button class="btn btn-outline-light mb-3" onclick="closeAll()">
-            Voltar
-          </button>
+      <div id="overlay-agua" class="overlay-agua d-none">
+        <div id="agua1" class="content-box-agua d-none" style="font-size: 20px">
           <h3>Evite banhos longos</h3>
-          <p>Reduza o tempo de banho para economizar até 90 litros por vez.</p>
-        </div>
-
-        <div id="agua2" class="content-box d-none">
-          <button class="btn btn-outline-light mb-3" onclick="closeAll()">
-            Voltar
-          </button>
-          <h3>Feche a torneira ao escovar os dentes</h3>
-          <p>
-            Deixar a torneira aberta pode desperdiçar até 12 litros de água.
+          <p style="text-align: justify">
+            Um banho de 15 minutos com o chuveiro elétrico pode gastar até 135
+            litros de agua!
           </p>
-        </div>
-
-        <div id="agua3" class="content-box d-none">
-          <button class="btn btn-outline-light mb-3" onclick="closeAll()">
+          <p><b>Como fazer para economizar?</b></p>
+          <ul style="text-align: justify">
+            <li>
+              Use um cronômetro ou músicas como guia (1 música = +/- 3.4
+              minutos)
+            </li>
+            <li>Feche o chuveiro ao se ensaboar</li>
+            <li>Instale um redutor de vasão no chuveiro</li>
+          </ul>
+          <button class="btn btn-outline-light mb-3" onclick="fecharTudoAgua()">
             Voltar
           </button>
-          <h3>Lave a louça com consciência</h3>
-          <p>Ensaboe tudo antes de abrir a torneira para enxaguar.</p>
         </div>
 
-        <div id="agua4" class="content-box d-none">
-          <button class="btn btn-outline-light mb-3" onclick="closeAll()">
+        <div id="agua2" class="content-box-agua d-none" style="font-size: 20px">
+          <h3>Reutilize água da máquina de lavar</h3>
+          <p>Uma lavadoura consome de 80 a 150 litros por ciclo</p>
+          <p style="text-align: justify"><b>Como fazer?</b></p>
+          <ul style="text-align: justify">
+            <li>Armazene água do enxague com baldes</li>
+            <li>Use para lavar o quintal, calçada ou o carro</li>
+            <li class="text-danger">NÃO USE PARA COZINHAR OU REGAR PLANTAS</li>
+          </ul>
+          <button class="btn btn-outline-light mb-3" onclick="fecharTudoAgua()">
             Voltar
           </button>
+        </div>
+
+        <div id="agua3" class="content-box-agua d-none">
+          <h3>Capte água da chuva</h3>
+          <p>
+            É agua gratuita e pode substituir o uso de água potável em várias
+            tarefas
+          </p>
+          <p style="text-align: justify"><b>Como fazer?</b></p>
+          <ul style="text-align: justify">
+            <li>Use baldes ou um tambor grande posicionado em áreas abertas</li>
+            <li>Filtre ou coe antes de usar, se necessário</li>
+            <li>
+              Ideal para regar o jardim, lavar o chão ou dar descarga (com
+              reaproveitamento)
+            </li>
+          </ul>
+          <button class="btn btn-outline-light mb-3" onclick="fecharTudoAgua()">
+            Voltar
+          </button>
+        </div>
+
+        <div id="agua4" class="content-box-agua d-none">
           <h3>Conserte vazamentos</h3>
           <p>
             Um pequeno vazamento pode desperdiçar mais de 40 litros por dia!
           </p>
+          <p style="text-align: justify"><b>Como fazer?</b></p>
+          <ul style="text-align: justify">
+            <li>Verifique torneiras, registros e caixas d'água</li>
+            <li>
+              Faça o teste de hidrômetro: se ele gira com todas as torneiras
+              fechadas, há vazamentos
+            </li>
+            <li>Troque borrachinhas gastas ou contrate um encanador</li>
+          </ul>
+
+          <button class="btn btn-outline-light mb-3" onclick="fecharTudoAgua()">
+            Voltar
+          </button>
         </div>
       </div>
 
       <!-- Estilo -->
       <style>
-        .emoji-box {
+        .emoji-box-agua {
           font-size: 4rem;
           background: #e0f7fa;
           border-radius: 20px;
@@ -332,11 +374,11 @@
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
 
-        .emoji-box:hover {
+        .emoji-box-agua:hover {
           transform: scale(1.1);
         }
 
-        .overlay {
+        .overlay-agua {
           position: fixed;
           top: 0;
           left: 0;
@@ -351,7 +393,7 @@
           padding: 20px;
         }
 
-        .content-box {
+        .content-box-agua {
           background: #003b46;
           color: #fff;
           padding: 40px;
@@ -362,38 +404,28 @@
           text-align: center;
           animation: fadeIn 0.4s ease-in-out;
         }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: scale(0.95);
-          }
-          to {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
       </style>
 
       <!-- Script -->
       <script>
-        function openContent(id) {
-          document.getElementById("overlay").classList.remove("d-none");
+        function abrirConteudoAgua(id) {
+          document.getElementById("overlay-agua").classList.remove("d-none");
           document
-            .querySelectorAll(".content-box")
+            .querySelectorAll(".content-box-agua")
             .forEach((div) => div.classList.add("d-none"));
           document.getElementById(id).classList.remove("d-none");
         }
 
-        function closeAll() {
-          document.getElementById("overlay").classList.add("d-none");
+        function fecharTudoAgua() {
+          document.getElementById("overlay-agua").classList.add("d-none");
           document
-            .querySelectorAll(".content-box")
+            .querySelectorAll(".content-box-agua")
             .forEach((div) => div.classList.add("d-none"));
         }
       </script>
     </section>
 
+    <!-- footer -->
     <footer class="bg-dark text-white pt-5 pb-4">
       <div class="container">
         <div class="row">
