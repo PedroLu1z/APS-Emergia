@@ -1,127 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ecobalanço</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <main>
-      <!-- Nav Bar -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">EcoBalanço</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="pages/calculadoraEmergia.html"
-                  >Calculadora de Emergia</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/praticasSustentaveis.html"
-                  >Práticas Sustentáveis</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pages/quemSomos.html">Quem somos?</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
-      <!-- section - header - banner inicial do site -->
-      <section
-        class="bg-dark text-white py-5"
-        style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecobalanço</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+</head>
+
+<body>
+  <main>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">EcoBalanço</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="pages/calculadoraEmergia.html">Calculadora de
+                Emergia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/praticasSustentaveis.html">Práticas Sustentáveis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pages/quemSomos.html">Quem somos?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- section - header - banner inicial do site -->
+    <section class="bg-dark text-white py-5" style="
           background: url('../img/indexImg/header.png') center center / cover
             no-repeat;
           position: relative;
-        "
-      >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div
-              class="col-lg-10 col-md-12 text-center position-relative"
-              style="z-index: 2"
-            >
-              <div class="p-4 rounded shadow-lg">
-                <h1 class="display-5 fw-bold">
-                  Descubra
-                  <span class="text-success">Práticas Sustentáveis</span><br />
-                  que não afetam o seu <span class="text-success">Bolso</span>
-                </h1>
-                <p class="lead mb-4">
-                  Soluções simples, eficazes e econômicas para um futuro melhor.
-                </p>
-                <a href="#secao-explorar" class="btn btn-light btn-lg px-4"
-                  >Conheça mais</a
-                >
-              </div>
+        ">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-md-12 text-center position-relative" style="z-index: 2">
+            <div class="p-4 rounded shadow-lg">
+              <h1 class="display-5 fw-bold">
+                Descubra
+                <span class="text-success">Práticas Sustentáveis</span><br />
+                que não afetam o seu <span class="text-success">Bolso</span>
+              </h1>
+              <p class="lead mb-4">
+                Soluções simples, eficazes e econômicas para um futuro melhor.
+              </p>
+              <a href="#secao-explorar" class="btn btn-light btn-lg px-4">Conheça mais</a>
             </div>
           </div>
         </div>
-        <!-- Overlay para escurecer o fundo -->
-        <div
-          style="
+      </div>
+      <!-- Overlay para escurecer o fundo -->
+      <div style="
             position: absolute;
             inset: 0;
             background: rgba(0, 0, 0, 0.4);
             z-index: 1;
-          "
-        ></div>
-      </section>
+          "></div>
     </section>
-      <!-- O que é emergia - section 1 -->
-      <section class="my-5">
-        <div>
-          <div class="container">
-            <div class="bg-white rounded-4 shadow-lg p-4 p-md-5">
-              <h2 class="fw-bold mb-3 text-center text-success">
-                O que é Emergia?
-              </h2>
-              <p class="text-muted mb-4">
-                Emergia é uma medida da energia utilizada direta e indiretamente
-                para fabricar um produto ou manter um sistema. Compreender a
-                emergia nos ajuda a tomar decisões mais sustentáveis.
-              </p>
-              <div class="text-center">
-              <img
-                src="../img/indexImg/natureza.png"
-                alt="ARVORE SENDO CORTADA"
-                class="img-fluid my-3"
-              />
-              <img
-                src="../img/indexImg/industria.png"
-                alt="INDUSTRIA"
-                class="img-fluid my-3"
-              />
-              <img
-                src="../img/indexImg/papel.png"
-                alt="PAPEL"
-                class="img-fluid my-3"
-              />
+    </section>
+    <!-- O que é emergia - section 1 -->
+    <section class="my-5">
+      <div>
+        <div class="container">
+          <div class="bg-white rounded-4 shadow-lg p-4 p-md-5">
+            <h2 class="fw-bold mb-3 text-center text-success">
+              O que é Emergia?
+            </h2>
+            <p class="text-muted mb-4">
+              Emergia é uma medida da energia utilizada direta e indiretamente
+              para fabricar um produto ou manter um sistema. Compreender a
+              emergia nos ajuda a tomar decisões mais sustentáveis.
+            </p>
+            <div class="text-center">
+              <img src="../img/indexImg/natureza.png" alt="ARVORE SENDO CORTADA" class="img-fluid my-3" />
+              <img src="../img/indexImg/industria.png" alt="INDUSTRIA" class="img-fluid my-3" />
+              <img src="../img/indexImg/papel.png" alt="PAPEL" class="img-fluid my-3" />
             </div>
             <p class="text-muted mb-4">
               Imagine que você esta segurando uma folha de papel. Para que ela
@@ -135,170 +98,131 @@
         </div>
 
       </div>
-      </section>
-      <!-- section 2 - Práticas sustentáveis -->
-      <section class="my-5">
-        <div class="container">
-          <div class="bg-white rounded-4 shadow-lg p-4 p-md-5 text-center">
-            <h2 class="fw-bold text-success mb-5">
-              Explore práticas sustentáveis
-            </h2>
-            <div class="row g-4">
-              <!-- Card 1 -->
-              <div class="col-md-4">
-                <div class="bg-white border rounded-4 shadow-sm p-3 h-100">
-                  <h5>Reduza, Reutilize, Recicle</h5>
-                  <img
-                    src="../img/indexImg/recicle.png"
-                    alt="Reciclagem"
-                    class="img-fluid my-3"
-                  />
-                  <p class="text-muted">
-                    Descubra agora como separar o lixo corretamente e junte-se a
-                    um lifestyle verde
-                  </p>
-                  <a href="pages/praticasSustentaveis.html" class="text-primary text-decoration-none"
-                    >Descubra agora!</a
-                  >
-                </div>
+    </section>
+    <!-- section 2 - Práticas sustentáveis -->
+    <section class="my-5">
+      <div class="container">
+        <div class="bg-white rounded-4 shadow-lg p-4 p-md-5 text-center">
+          <h2 class="fw-bold text-success mb-5">
+            Explore práticas sustentáveis
+          </h2>
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+              <div class="bg-white border rounded-4 shadow-sm p-3 h-100">
+                <h5>Reduza, Reutilize, Recicle</h5>
+                <img src="../img/indexImg/recicle.png" alt="Reciclagem" class="img-fluid my-3" />
+                <p class="text-muted">
+                  Descubra agora como separar o lixo corretamente e junte-se a
+                  um lifestyle verde
+                </p>
+                <a href="pages/praticasSustentaveis.html" class="text-primary text-decoration-none">Descubra agora!</a>
               </div>
+            </div>
 
-              <!-- Card 2 -->
-              <div class="col-md-4">
-                <div class="bg-white border rounded-4 shadow-sm p-3 h-100">
-                  <h5>Economize água, energia e dinheiro</h5>
-                  <img
-                    src="../img/indexImg/torneira.png"
-                    alt="Torneira"
-                    class="img-fluid my-3"
-                  />
-                  <p class="text-muted">Pequenas ações = grande impacto</p>
-                  <a href="pages/praticasSustentaveis.html" class="text-primary text-decoration-none"
-                    >Saiba mais de como economizar água</a
-                  >
-                </div>
+            <!-- Card 2 -->
+            <div class="col-md-4">
+              <div class="bg-white border rounded-4 shadow-sm p-3 h-100">
+                <h5>Economize água, energia e dinheiro</h5>
+                <img src="../img/indexImg/torneira.png" alt="Torneira" class="img-fluid my-3" />
+                <p class="text-muted">Pequenas ações = grande impacto</p>
+                <a href="pages/praticasSustentaveis.html" class="text-primary text-decoration-none">Saiba mais de como
+                  economizar água</a>
               </div>
+            </div>
 
-              <!-- Card 3 -->
-              <div class="col-md-4">
-                <div class="bg-white border rounded-4 shadow-sm p-3 h-100">
-                  <h5>Transporte sustentável</h5>
-                  <img
-                    src="../img/indexImg/bicileta.png"
-                    alt="Bicicleta na cidade"
-                    class="img-fluid my-3"
-                  />
-                  <p class="text-muted">
-                    Caminhe, pedale ou vá de elétrico: menos CO₂, mais saúde
-                  </p>
-                </div>
+            <!-- Card 3 -->
+            <div class="col-md-4">
+              <div class="bg-white border rounded-4 shadow-sm p-3 h-100">
+                <h5>Transporte sustentável</h5>
+                <img src="../img/indexImg/bicileta.png" alt="Bicicleta na cidade" class="img-fluid my-3" />
+                <p class="text-muted">
+                  Caminhe, pedale ou vá de elétrico: menos CO₂, mais saúde
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- section 3 - CTA - junte-se a nos -->
-      <section class="my-5">
-        <div class="container">
-          <div class="bg-white rounded-4 shadow-lg p-4 p-md-5 text-center">
-            <h2 class="fw-bold mb-3">Junte-se a nós e faça a diferença</h2>
-            <p class="text-muted mb-4">
-              Seja parte de nossa missão para criarmos um futuro sustentável,
-              limpo e econômico!
+      </div>
+    </section>
+    <!-- section 3 - CTA - junte-se a nos -->
+    <section class="my-5">
+      <div class="container">
+        <div class="bg-white rounded-4 shadow-lg p-4 p-md-5 text-center">
+          <h2 class="fw-bold mb-3">Junte-se a nós e faça a diferença</h2>
+          <p class="text-muted mb-4">
+            Seja parte de nossa missão para criarmos um futuro sustentável,
+            limpo e econômico!
+          </p>
+          <button class="btn btn-success px-4 py-2 rounded-pill shadow-sm">
+            Envolva-se
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container">
+        <div class="row">
+          <!-- Formulário de Contato -->
+          <div class="col-md-6 mb-4">
+            <h5 class="mb-3">Contate-nos</h5>
+            <form>
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Seu nome" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="seu@email.com" />
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="3" placeholder="Digite sua mensagem"></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Enviar</button>
+            </form>
+          </div>
+
+          <!-- Informações do footer -->
+          <div class="col-md-6 mb-4">
+            <h5 class="mb-3">EcoBalanço</h5>
+            <p>
+              Construindo um futuro mais limpo e consciente com pequenas ações
+              que fazem grandes diferenças.
             </p>
-            <button class="btn btn-success px-4 py-2 rounded-pill shadow-sm">
-              Envolva-se
-            </button>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white text-decoration-none">Política de Privacidade</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Termos de Uso</a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none">Acessibilidade</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
 
-      <!-- Footer -->
-      <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container">
-          <div class="row">
-            <!-- Formulário de Contato -->
-            <div class="col-md-6 mb-4">
-              <h5 class="mb-3">Contate-nos</h5>
-              <form>
-                <div class="mb-3">
-                  <label for="nome" class="form-label">Nome</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nome"
-                    placeholder="Seu nome"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">E-mail</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="mensagem" class="form-label">Mensagem</label>
-                  <textarea
-                    class="form-control"
-                    id="mensagem"
-                    rows="3"
-                    placeholder="Digite sua mensagem"
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-success">Enviar</button>
-              </form>
-            </div>
+        <hr class="bg-white" />
 
-            <!-- Informações do footer -->
-            <div class="col-md-6 mb-4">
-              <h5 class="mb-3">EcoBalanço</h5>
-              <p>
-                Construindo um futuro mais limpo e consciente com pequenas ações
-                que fazem grandes diferenças.
-              </p>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="text-white text-decoration-none"
-                    >Política de Privacidade</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-white text-decoration-none"
-                    >Termos de Uso</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-white text-decoration-none"
-                    >Acessibilidade</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <hr class="bg-white" />
-
-          <div class="text-center">
-            <p class="mb-0">
-              &copy; 2025 EcoBalanço. Todos os direitos reservados.
-            </p>
-          </div>
+        <div class="text-center">
+          <p class="mb-0">
+            &copy; 2025 EcoBalanço. Todos os direitos reservados.
+          </p>
         </div>
-      </footer>
-    </main>
+      </div>
+    </footer>
+  </main>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
-      integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+    integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
