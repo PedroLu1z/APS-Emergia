@@ -1,227 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecobalanço</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .card-custom {
+        width: 250px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ecobalanço</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-  <style>
-    .card-custom {
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+      .profile-pic {
+        height: 150px;
+        width: 100%;
+        background-color: #ccc;
+      }
 
-    .profile-pic {
-      height: 150px;
-      width: 100%;
-      background-color: #ccc;
-    }
+      .social-icons i {
+        font-size: 1.2rem;
+        margin-right: 10px;
+        cursor: pointer;
+        color: #555;
+      }
 
-    .social-icons i {
-      font-size: 1.2rem;
-      margin-right: 10px;
-      cursor: pointer;
-      color: #555;
-    }
+      .social-icons i:hover {
+        color: #000;
+      }
+    </style>
+  </head>
 
-    .social-icons i:hover {
-      color: #000;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- NavBar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 z-3 py-3">
-    <div class="container">
-      <!-- Logo + Nome do Site -->
-      <a class="navbar-brand d-flex align-items-center fs-4" href="#">
-        <img src="../../img/logo-ecobalanco.png" alt="Logo" width="100" height="100" class="me-2" />
-        <strong><a href="../index.html" style="text-decoration: none"
-            class="nav-link text-white">EcoBalanço</a></strong>
-      </a>
-
-      <!-- Botão do menu responsivo -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Links -->
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="calculadoraEmergia.html">Calculadora Emergia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="praticasSustentaveis.html">Práticas Sustentáveis</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fs-5" href="quemSomos.html">Equipe EcoBalanço</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Seção com imagem de fundo -->
-  <section class="position-relative text-center" style="
-        background: url('../../img/usImg/Header-Quem-Somos.png')
-          center center / cover no-repeat;
-        height: 60vh;
-      ">
-    <!-- Overlay escuro -->
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.3); z-index: 1">
-    </div>
-
-    <!-- Título centralizado -->
-    <div class="position-absolute top-50 start-50 translate-middle z-2">
-      <h2 class="text-white fw-bold display-6  pb-1 px-3">
-        Equipe EcoBalanço
-      </h2>
-    </div>
-  </section>
-
-  <!-- Seção Cards Membros -->
-  <section>
-    <h1 class="text-center">Membros do EcoBalanço</h1>
-    <div class="d-flex justify-content-center align-items-center">
-      <div class="card p-3 text-center card-custom bg-light">
-        <div class="profile-pic mb-3"></div>
-        <h5 class="mb-0">Nome</h5>
-        <p class="text-muted">O que faz</p>
-        <div class="social-icons">
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <div class="card p-3 text-center card-custom bg-light">
-        <div class="profile-pic mb-3"></div>
-        <h5 class="mb-0">Nome</h5>
-        <p class="text-muted">O que faz</p>
-        <div class="social-icons">
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-
-      <div class="card p-3 text-center card-custom bg-light">
-        <div class="profile-pic mb-3"></div>
-        <h5 class="mb-0">Nome</h5>
-        <p class="text-muted">O que faz</p>
-        <div class="social-icons">
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção Motivação + Arquivo -->
-  <section class="my-5">
-    <div>
+  <body>
+    <!-- NavBar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 z-3 py-3"
+    >
       <div class="container">
-        <div class="bg-white rounded-4 shadow-lg p-4 p-md-5">
-          <h2 class="fw-bold mb-3 text-center text-success">
-            Nossa Motivação
-          </h2>
-          <p class="text-muted mb-4">
-            A ideia do EcoBalanço nasceu de uma inquietação real e coletiva: como podemos viver de forma mais consciente
-            em um mundo cada vez mais sobrecarregado de consumo? Como equipe, sentimos que pequenas atitudes do dia a
-            dia, como o uso de um notebook ou o tempo que passamos com a TV ligada, parecem inofensivas... mas têm um
-            impacto enorme no planeta.
-          </p>
-          <p class="text-muted mb-4">
-            Ao perceber isso, decidimos transformar a nossa angústia em ação. Queríamos mais do que um projeto:
-            queríamos um propósito. A calculadora de emergia não é só um código rodando na tela - ela é o reflexo do
-            nosso desejo de levar informação de forma clara, acessível e transformadora para quem nós, quer fazer a
-            diferença, mas muitas vezes não sabe por onde começar
-          </p>
-          <p class="text-muted mb-4">
-            Cada membro de nossa equipe trouxe uma parte dessa visão: uns com o olhar técnico, outros com a
-            sensibilidade social e a vontade de comunicar com empatia. Essa diversidade nos uniu e fortaleceu a ideia de
-            que sustentabilidade também é sobre conexão humana, escolhas conscientes e, principalmente, sobre repensar o
-            estilo de vida
-          </p>
-          <p class="text-muted mb-4">
-            Mais do que desenvolver uma ferramenta, desenvolvemos juntos um novo jeito de enxergar o mundo. E queremos
-            compartilhar isso com você
-          </p>
-          <p>Baixar Pesquisa Cientifica <b><a href="" download="" class="link-pdf"
-                style="text-decoration: none; color: #000;">Baixe Aqui</a></b></p>
-        </div>
-      </div>
+        <!-- Logo + Nome do Site -->
+        <a class="navbar-brand d-flex align-items-center fs-4" href="#">
+          <img
+            src="../../img/logo-ecobalanco.png"
+            alt="Logo"
+            width="100"
+            height="100"
+            class="me-2"
+          />
+          <strong
+            ><a
+              href="../index.html"
+              style="text-decoration: none"
+              class="nav-link text-white"
+              >EcoBalanço</a
+            ></strong
+          >
+        </a>
 
-    </div>
-  </section>
+        <!-- Botão do menu responsivo -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-
-  <!-- footer -->
-  <footer class="bg-dark text-white pt-5 pb-4">
-    <div class="container">
-      <div class="row">
-        <!-- Formulário de Contato -->
-        <div class="col-md-6 mb-4">
-          <h5 class="mb-3">Contate-nos</h5>
-          <form>
-            <div class="mb-3">
-              <label for="nome" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="nome" placeholder="Seu nome" />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">E-mail</label>
-              <input type="email" class="form-control" id="email" placeholder="seu@email.com" />
-            </div>
-            <div class="mb-3">
-              <label for="mensagem" class="form-label">Mensagem</label>
-              <textarea class="form-control" id="mensagem" rows="3" placeholder="Digite sua mensagem"></textarea>
-            </div>
-            <button type="submit" class="btn btn-success">Enviar</button>
-          </form>
-        </div>
-
-        <!-- Informações do footer -->
-        <div class="col-md-6 mb-4">
-          <h5 class="mb-3">EcoBalanço</h5>
-          <p>
-            Construindo um futuro mais limpo e consciente com pequenas ações
-            que fazem grandes diferenças.
-          </p>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-white text-decoration-none">Política de Privacidade</a>
+        <!-- Links -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="calculadoraEmergia.html"
+                >Calculadora Emergia</a
+              >
             </li>
-            <li>
-              <a href="#" class="text-white text-decoration-none">Termos de Uso</a>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white fs-5"
+                href="praticasSustentaveis.html"
+                >Práticas Sustentáveis</a
+              >
             </li>
-            <li>
-              <a href="#" class="text-white text-decoration-none">Acessibilidade</a>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="quemSomos.html"
+                >Equipe EcoBalanço</a
+              >
             </li>
           </ul>
         </div>
       </div>
+    </nav>
 
-      <hr class="bg-white" />
+    <!-- Seção com imagem de fundo -->
+    <section
+      class="position-relative text-center"
+      style="
+        background: url('../../img/usImg/Header-Quem-Somos.png') center center /
+          cover no-repeat;
+        height: 60vh;
+      "
+    >
+      <!-- Overlay escuro -->
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100"
+        style="background-color: rgba(0, 0, 0, 0.3); z-index: 1"
+      ></div>
 
-      <div class="text-center">
-        <p class="mb-0">
-          &copy; 2025 EcoBalanço. Todos os direitos reservados.
-        </p>
+      <!-- Título centralizado -->
+      <div class="position-absolute top-50 start-50 translate-middle z-2">
+        <h2 class="text-white fw-bold display-6 pb-1 px-3">
+          Equipe EcoBalanço
+        </h2>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- js -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
-    integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
-    crossorigin="anonymous"></script>
-</body>
+    <!-- Seção Cards Membros -->
+    <section>
+      <h1 class="text-center">Membros do EcoBalanço</h1>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="card p-3 text-center card-custom bg-light">
+          <div class="profile-pic mb-3"></div>
+          <h5 class="mb-0">Pedro Luiz</h5>
+          <p class="text-muted">H70CAD2</p>
+          <p class="text-muted">Dev - Front End</p>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
 
+        <div class="card p-3 text-center card-custom bg-light">
+          <div class="profile-pic mb-3"></div>
+          <h5 class="mb-0">Pedro Pontes</h5>
+          <p class="text-muted">H70CAD2</p>
+          <p class="text-muted">BD</p>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="card p-3 text-center card-custom bg-light">
+          <div class="profile-pic mb-3"></div>
+          <h5 class="mb-0">Danilo</h5>
+          <p class="text-muted">H70CAD2</p>
+          <p class="text-muted">O que faz</p>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="card p-3 text-center card-custom bg-light">
+          <div class="profile-pic mb-3"></div>
+          <h5 class="mb-0">David</h5>
+          <p class="text-muted">H70CAD2</p>
+          <p class="text-muted">O que faz</p>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Motivação + Arquivo -->
+    <section class="my-5">
+      <div>
+        <div class="container">
+          <div class="bg-white rounded-4 shadow-lg p-4 p-md-5">
+            <h2 class="fw-bold mb-3 text-center text-success">
+              Nossa Motivação
+            </h2>
+            <p class="text-muted mb-4">
+              A ideia do EcoBalanço nasceu de uma inquietação real e coletiva:
+              como podemos viver de forma mais consciente em um mundo cada vez
+              mais sobrecarregado de consumo? Como equipe, sentimos que pequenas
+              atitudes do dia a dia, como o uso de um notebook ou o tempo que
+              passamos com a TV ligada, parecem inofensivas... mas têm um
+              impacto enorme no planeta.
+            </p>
+            <p class="text-muted mb-4">
+              Ao perceber isso, decidimos transformar a nossa angústia em ação.
+              Queríamos mais do que um projeto: queríamos um propósito. A
+              calculadora de emergia não é só um código rodando na tela - ela é
+              o reflexo do nosso desejo de levar informação de forma clara,
+              acessível e transformadora para quem nós, quer fazer a diferença,
+              mas muitas vezes não sabe por onde começar
+            </p>
+            <p class="text-muted mb-4">
+              Cada membro de nossa equipe trouxe uma parte dessa visão: uns com
+              o olhar técnico, outros com a sensibilidade social e a vontade de
+              comunicar com empatia. Essa diversidade nos uniu e fortaleceu a
+              ideia de que sustentabilidade também é sobre conexão humana,
+              escolhas conscientes e, principalmente, sobre repensar o estilo de
+              vida
+            </p>
+            <p class="text-muted mb-4">
+              Mais do que desenvolver uma ferramenta, desenvolvemos juntos um
+              novo jeito de enxergar o mundo. E queremos compartilhar isso com
+              você
+            </p>
+            <p>
+              Baixar Pesquisa Cientifica
+              <b
+                ><a
+                  href=""
+                  download=""
+                  class="link-pdf"
+                  style="text-decoration: none; color: #000"
+                  >Baixe Aqui</a
+                ></b
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container">
+        <div class="row">
+          <!-- Formulário de Contato -->
+          <div class="col-md-6 mb-4">
+            <h5 class="mb-3">Contate-nos</h5>
+            <form>
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nome"
+                  placeholder="Seu nome"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="seu@email.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea
+                  class="form-control"
+                  id="mensagem"
+                  rows="3"
+                  placeholder="Digite sua mensagem"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Enviar</button>
+            </form>
+          </div>
+
+          <!-- Informações do footer -->
+          <div class="col-md-6 mb-4">
+            <h5 class="mb-3">EcoBalanço</h5>
+            <p>
+              Construindo um futuro mais limpo e consciente com pequenas ações
+              que fazem grandes diferenças.
+            </p>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Política de Privacidade</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Termos de Uso</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none"
+                  >Acessibilidade</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="bg-white" />
+
+        <div class="text-center">
+          <p class="mb-0">
+            &copy; 2025 EcoBalanço. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+      integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
