@@ -1,0 +1,62 @@
+[
+  {
+    "nome": "Notebook",
+    "potencia_w": 60,
+    "emergia_por_hora_sej": 958904109589,
+    "dica": "Diminua o brilho da tela e desconecte o carregador após carregar."
+  },
+  {
+    "nome": "Geladeira",
+    "potencia_w": 150,
+    "emergia_por_hora_sej": 2397260273972,
+    "dica": "Evite abrir a porta com frequência e mantenha as borrachas em bom estado."
+  },
+  {
+    "nome": "Televisão LED 42\"",
+    "potencia_w": 100,
+    "emergia_por_hora_sej": 1598639455782,
+    "dica": "Desligue quando não estiver assistindo e evite usar como som ambiente."
+  },
+  {
+    "nome": "Carregador de celular",
+    "potencia_w": 5,
+    "emergia_por_hora_sej": 79931972789,
+    "dica": "Não deixe o carregador na tomada sem uso."
+  },
+  {
+    "nome": "Micro-ondas",
+    "potencia_w": 1200,
+    "emergia_por_hora_sej": 19183673469387,
+    "dica": "Evite usá-lo para aquecer pequenas quantidades várias vezes ao dia."
+  },
+  {
+    "nome": "Ventilador",
+    "potencia_w": 80,
+    "emergia_por_hora_sej": 1278911564629,
+    "dica": "Utilize em conjunto com janelas abertas para melhor circulação de ar."
+  },
+  {
+    "nome": "Ar-condicionado",
+    "potencia_w": 1500,
+    "emergia_por_hora_sej": 23979591836734,
+    "dica": "Use em temperaturas moderadas e mantenha a manutenção em dia."
+  },
+  {
+    "nome": "Desktop (PC de mesa)",
+    "potencia_w": 200,
+    "emergia_por_hora_sej": 3197278911564,
+    "dica": "Desligue quando não estiver usando e otimize o uso de programas pesados."
+  },
+  {
+    "nome": "Máquina de lavar roupa",
+    "potencia_w": 500,
+    "emergia_por_hora_sej": 7993197278910,
+    "dica": "Use somente com carga completa e no modo econômico."
+  },
+  {
+    "nome": "Chuveiro elétrico",
+    "potencia_w": 5500,
+    "emergia_por_hora_sej": 87925170068027,
+    "dica": "Reduza o tempo de banho e evite a temperatura máxima nos dias quentes."
+  }
+]

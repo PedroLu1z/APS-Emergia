@@ -10,6 +10,11 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
+
     <style>
       body {
         background-color: #f9f9f9;
@@ -167,10 +172,7 @@
                 >
                 <select class="form-select" id="equipamento" required>
                   <option value="">Selecione</option>
-                  <option value="notebook">Notebook</option>
-                  <option value="geladeira">Geladeira</option>
-                  <option value="tv">TV</option>
-                  <option value="micro-ondas">Micro-ondas</option>
+                  <!-- Opções serão carregadas dinamicamente -->
                 </select>
               </div>
               <div class="mb-3">
@@ -191,7 +193,7 @@
               </button>
             </form>
 
-            <div class="resultado mt-5" id="resultado">
+            <div class="resultado mt-5" id="resultado" style="display: none">
               <h5 class="fw-bold text-success">Resultado:</h5>
               <p id="resumo"></p>
               <h6 class="fw-bold mt-4">Dicas Sustentáveis:</h6>
@@ -201,52 +203,56 @@
         </div>
 
         <script>
-          const emergiaBase = {
-            notebook: 1000, // valor fictício em sej (Solar Emjoules)
-            geladeira: 2500,
-            tv: 1500,
-          };
+          let dadosEquipamentos = [];
 
-          const dicasPorEquipamento = {
-            notebook: [
-              "Desligue o notebook quando não estiver usando.",
-              "Use o modo economia de energia.",
-              "Reduza o brilho da tela.",
-            ],
-            geladeira: [
-              "Evite abrir a porta da geladeira com frequência.",
-              "Mantenha as borrachas da porta em bom estado.",
-              "Não coloque alimentos quentes direto nela.",
-            ],
-            tv: [
-              "Desligue a TV da tomada quando não estiver em uso.",
-              "Use o timer de desligamento automático.",
-              "Evite deixá-la ligada como “som de fundo”.",
-            ],
-          };
+          fetch("./Dados/Dados.json")
+            .then((res) => res.json())
+            .then((dados) => {
+              dadosEquipamentos = dados;
+
+              const selectEquipamento = document.getElementById("equipamento");
+
+              dados.forEach((item) => {
+                const option = document.createElement("option");
+                option.value = item.nome.toLowerCase().replace(/\s+/g, "-");
+                option.textContent = item.nome;
+                selectEquipamento.appendChild(option);
+              });
+            });
 
           document
             .getElementById("form-calculadora")
             .addEventListener("submit", function (e) {
               e.preventDefault();
 
-              const equipamento = document.getElementById("equipamento").value;
+              const equipamentoSelecionado =
+                document.getElementById("equipamento").value;
               const horas = parseFloat(document.getElementById("tempo").value);
-              const emergiaDiaria = emergiaBase[equipamento] || 0;
-              const totalEmergia = emergiaDiaria * horas;
 
-              const resumoTexto = `Você usa o seu <b>${equipamento}</b> por <b>${horas}h/dia</b>, o que equivale a um consumo estimado de <b>${totalEmergia.toLocaleString()} sej/dia</b>. Essa energia é equivalente à soma de todas as etapas envolvidas para que esse equipamento funcione, como produção, transporte, consumo e descarte.`;
+              const equipamento = dadosEquipamentos.find(
+                (item) =>
+                  item.nome.toLowerCase().replace(/\s+/g, "-") ===
+                  equipamentoSelecionado
+              );
+
+              if (!equipamento) {
+                alert("Equipamento não encontrado!");
+                return;
+              }
+
+              const totalEmergia = equipamento.emergia_por_hora_sej * horas;
+
+              const resumoTexto = `Você usa o seu <b>${
+                equipamento.nome
+              }</b> por <b>${horas}h/dia</b>, o que equivale a um consumo estimado de <b>${totalEmergia.toLocaleString()} sej/dia</b>. Essa energia representa o impacto de todas as etapas do ciclo de vida do equipamento: produção, transporte, uso e descarte.`;
 
               document.getElementById("resumo").innerHTML = resumoTexto;
 
-              const dicas = dicasPorEquipamento[equipamento];
               const listaDicas = document.getElementById("dicas");
               listaDicas.innerHTML = "";
-              dicas.forEach((dica) => {
-                const li = document.createElement("li");
-                li.textContent = dica;
-                listaDicas.appendChild(li);
-              });
+              const li = document.createElement("li");
+              li.textContent = equipamento.dica;
+              listaDicas.appendChild(li);
 
               document.getElementById("resultado").style.display = "block";
             });
@@ -260,7 +266,7 @@
             <!-- Formulário de Contato -->
             <div class="col-md-6 mb-4">
               <h5 class="mb-3">Contate-nos</h5>
-              <form>
+              <form id="form-contato">
                 <div class="mb-3">
                   <label for="nome" class="form-label">Nome</label>
                   <input
@@ -327,10 +333,46 @@
             </p>
           </div>
         </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // Inicializa o EmailJS com a sua API Key
+            emailjs.init("vRAH9FcS44mB2e93F"); // Substitua pela sua API Key
+
+            // Captura o envio do formulário
+            document
+              .getElementById("form-contato")
+              .addEventListener("submit", function (e) {
+                e.preventDefault(); // Evita o envio padrão do formulário
+
+                // Captura os dados do formulário
+                const nome = document.getElementById("nome").value;
+                const email = document.getElementById("email").value;
+                const mensagem = document.getElementById("mensagem").value;
+
+                // Envia os dados para o EmailJS
+                emailjs
+                  .send("service_ngrav18", "template_g2vv68m", {
+                    nome: nome,
+                    email: email,
+                    mensagem: mensagem,
+                  })
+                  .then(
+                    function (response) {
+                      alert("Mensagem enviada com sucesso!");
+                    },
+                    function (error) {
+                      alert("Erro ao enviar a mensagem: " + error);
+                    }
+                  );
+              });
+          });
+        </script>
       </footer>
       <!-- Assinaturas -->
     </main>
     <!-- js -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
