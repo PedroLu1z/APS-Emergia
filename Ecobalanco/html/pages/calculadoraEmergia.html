@@ -1,387 +1,273 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EcoBalanço</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous"
-    />
-    <script
-      type="text/javascript"
-      src="https://cdn.emailjs.com/dist/email.min.js"
-    ></script>
 
-    <style>
-      body {
-        background-color: #f9f9f9;
-      }
-      .resultado {
-        display: none;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <!-- Navbar -->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 z-3 py-3"
-      >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoBalanço</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script src="Js/email.js"></script>
+  <style>
+    body {
+      background-color: #f9f9f9;
+    }
+
+    .resultado {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100 z-3 py-3">
+      <div class="container">
+        <!-- Logo + Nome do Site -->
+        <a class="navbar-brand d-flex align-items-center fs-4" href="#">
+          <img src="../../img/logo-ecobalanco.png" alt="Logo" width="100" height="100" class="me-2" />
+          <strong><a href="../index.html" style="text-decoration: none"
+              class="nav-link text-white">EcoBalanço</a></strong>
+        </a>
+
+        <!-- Botão do menu responsivo -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-3">
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="calculadoraEmergia.html">Calculadora de Emergia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="praticasSustentaveis.html">Práticas Sustentáveis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fs-5" href="quemSomos.html">Equipe EcoBalanço</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header - section -->
+    <section class="position-relative text-center" style="
+          background: url('../../img/calcImg/Calculadora-de-Emergia.png') center
+            center / cover no-repeat;
+          height: 60vh;
+        ">
+      <!-- Overlay escuro -->
+      <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.3); z-index: 1">
+      </div>
+
+      <!-- Título centralizado -->
+      <div class="position-absolute top-50 start-50 translate-middle z-2">
+        <h2 class="text-white fw-bold display-6 pb-1 px-3">
+          Calculadora de Emergia
+        </h2>
+      </div>
+    </section>
+
+    <!--  A Calculadora de Emergia e o Novo Estilo de Vida Sustentável -->
+    <section class="my-5">
+      <div>
         <div class="container">
-          <!-- Logo + Nome do Site -->
-          <a class="navbar-brand d-flex align-items-center fs-4" href="#">
-            <img
-              src="../../img/logo-ecobalanco.png"
-              alt="Logo"
-              width="100"
-              height="100"
-              class="me-2"
-            />
-            <strong
-              ><a
-                href="../index.html"
-                style="text-decoration: none"
-                class="nav-link text-white"
-                >EcoBalanço</a
-              ></strong
-            >
-          </a>
+          <div class="bg-white rounded-4 shadow-lg p-4 p-md-5">
+            <h2 class="fw-bold mb-3 text-center text-success">
+              A Calculadora de Emergia e o Novo Estilo de Vida Sustentável
+            </h2>
+            <p class="text-muted mb-4">
+              Vivemos em uma era em que pequenas escolhas tem grandes
+              impactos. A <b>Calculadora de Emergia</b> surge como uma aliada
+              no dia a dia de quem deseja viver de forma mais consiente,
+              transformando hábitos simples em ações sustentáveis
+            </p>
+            <p class="text-muted mb-4">
+              Ao utilizar dessa ferramenta, você passa a compreender, de forma
+              prática e humanizada, o <b>consumo energético real</b>
+              de aparelhos comuns, como notebooks, geladeiras e televisões.
+              Mais do que apenas números ele traduz o impacto ambiental desses
+              usos em termos acessíveis, revelando o caminho que a energia
+              percorre desde sua origem até o descarte final dos produtos
+            </p>
+            <p class="text-muted mb-4">
+              Com base nas Informações inseridas, a calculadora oferece
+              <b>dicas personalizadas</b> para reduzir esse consumo e
+              minimizar danos ao meio ambiente. Assim ela deixa de ser uma
+              ferramenta de cálculo e se torna uma ponte para um
+              <b>novo lifestyle</b> - mais consiente, equilibrado e
+              responsável
+            </p>
+            <p class="text-muted mb-4">
+              Integrar a calculadora de emergia à sua rotina significa
+              despertar para um novo olhar sobre o consumo e as escolhas
+              diárias. Significa assumir o controle de sua pegada ecológica e
+              fazer parte de uma geração que entende que sustentabilidade
+              começa dentro de casa - e se reflete no mundo inteiro.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Botão do menu responsivo -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+    <!-- Calculadora -->
+    <section>
+      <div class="container py-5">
+        <div class="bg-white rounded-4 shadow p-5 mx-auto" style="max-width: 500px">
+          <h3 class="text-success fw-bold mb-4 text-center">
+            Calculadora de Emergia
+          </h3>
+          <form id="form-calculadora">
+            <div class="mb-3">
+              <label for="equipamento" class="form-label">Escolha o equipamento:</label>
+              <select class="form-select" id="equipamento" required>
+                <option value="">Selecione</option>
+                <!-- Opções serão carregadas dinamicamente -->
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="tempo" class="form-label">Tempo de uso diário (em horas):</label>
+              <input type="number" class="form-control" id="tempo" placeholder="Ex: 6" min="0" required />
+            </div>
+            <button type="submit" class="btn btn-success w-100">
+              Calcular
+            </button>
+          </form>
 
-          <!-- Links -->
-          <div
-            class="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav gap-3">
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white fs-5"
-                  href="calculadoraEmergia.html"
-                  >Calculadora de Emergia</a
-                >
+          <div class="resultado mt-5" id="resultado" style="display: none">
+            <h5 class="fw-bold text-success">Resultado:</h5>
+            <p id="resumo"></p>
+            <h6 class="fw-bold mt-4">Dicas Sustentáveis:</h6>
+            <ul id="dicas" class="text-muted"></ul>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        let dadosEquipamentos = [];
+
+        fetch("./Dados/Dados.json")
+          .then((res) => res.json())
+          .then((dados) => {
+            dadosEquipamentos = dados;
+
+            const selectEquipamento = document.getElementById("equipamento");
+
+            dados.forEach((item) => {
+              const option = document.createElement("option");
+              option.value = item.nome.toLowerCase().replace(/\s+/g, "-");
+              option.textContent = item.nome;
+              selectEquipamento.appendChild(option);
+            });
+          });
+
+        document
+          .getElementById("form-calculadora")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const equipamentoSelecionado =
+              document.getElementById("equipamento").value;
+            const horas = parseFloat(document.getElementById("tempo").value);
+
+            const equipamento = dadosEquipamentos.find(
+              (item) =>
+                item.nome.toLowerCase().replace(/\s+/g, "-") ===
+                equipamentoSelecionado
+            );
+
+            if (!equipamento) {
+              alert("Equipamento não encontrado!");
+              return;
+            }
+
+            const totalEmergia = equipamento.emergia_por_hora_sej * horas;
+
+            const resumoTexto = `Você usa o seu <b>${equipamento.nome
+              }</b> por <b>${horas}h/dia</b>, o que equivale a um consumo estimado de <b>${totalEmergia.toLocaleString()} sej/dia</b>. Essa energia representa o impacto de todas as etapas do ciclo de vida do equipamento: produção, transporte, uso e descarte.`;
+
+            document.getElementById("resumo").innerHTML = resumoTexto;
+
+            const listaDicas = document.getElementById("dicas");
+            listaDicas.innerHTML = "";
+            const li = document.createElement("li");
+            li.textContent = equipamento.dica;
+            listaDicas.appendChild(li);
+
+            document.getElementById("resultado").style.display = "block";
+          });
+      </script>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container">
+        <div class="row">
+          <!-- Formulário de Contato -->
+          <div class="col-md-6 mb-4">
+            <h5 class="mb-3">Contate-nos</h5>
+            <form id="form-contato">
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Seu nome" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="seu@email.com" />
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="3" placeholder="Digite sua mensagem"></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Enviar</button>
+            </form>
+          </div>
+
+          <!-- Informações do footer -->
+          <div class="col-md-6 mb-4">
+            <h5 class="mb-3">EcoBalanço</h5>
+            <p>
+              Construindo um futuro mais limpo e consciente com pequenas ações
+              que fazem grandes diferenças.
+            </p>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-white text-decoration-none">Política de Privacidade</a>
               </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-white fs-5"
-                  href="praticasSustentaveis.html"
-                  >Práticas Sustentáveis</a
-                >
+              <li>
+                <a href="#" class="text-white text-decoration-none">Termos de Uso</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white fs-5" href="quemSomos.html"
-                  >Equipe EcoBalanço</a
-                >
+              <li>
+                <a href="#" class="text-white text-decoration-none">Acessibilidade</a>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
 
-      <!-- header - section -->
-      <section
-        class="position-relative text-center"
-        style="
-          background: url('../../img/calcImg/Calculadora-de-Emergia.png') center
-            center / cover no-repeat;
-          height: 60vh;
-        "
-      >
-        <!-- Overlay escuro -->
-        <div
-          class="position-absolute top-0 start-0 w-100 h-100"
-          style="background-color: rgba(0, 0, 0, 0.3); z-index: 1"
-        ></div>
+        <hr class="bg-white" />
 
-        <!-- Título centralizado -->
-        <div class="position-absolute top-50 start-50 translate-middle z-2">
-          <h2 class="text-white fw-bold display-6 pb-1 px-3">
-            Calculadora de Emergia
-          </h2>
+        <div class="text-center">
+          <p class="mb-0">
+            &copy; 2025 EcoBalanço. Todos os direitos reservados.
+          </p>
         </div>
-      </section>
+      </div>
+    </footer>
+    <!-- Assinaturas -->
+  </main>
+  <!-- js -->
 
-      <!--  A Calculadora de Emergia e o Novo Estilo de Vida Sustentável -->
-      <section class="my-5">
-        <div>
-          <div class="container">
-            <div class="bg-white rounded-4 shadow-lg p-4 p-md-5">
-              <h2 class="fw-bold mb-3 text-center text-success">
-                A Calculadora de Emergia e o Novo Estilo de Vida Sustentável
-              </h2>
-              <p class="text-muted mb-4">
-                Vivemos em uma era em que pequenas escolhas tem grandes
-                impactos. A <b>Calculadora de Emergia</b> surge como uma aliada
-                no dia a dia de quem deseja viver de forma mais consiente,
-                transformando hábitos simples em ações sustentáveis
-              </p>
-              <p class="text-muted mb-4">
-                Ao utilizar dessa ferramenta, você passa a compreender, de forma
-                prática e humanizada, o <b>consumo energético real</b>
-                de aparelhos comuns, como notebooks, geladeiras e televisões.
-                Mais do que apenas números ele traduz o impacto ambiental desses
-                usos em termos acessíveis, revelando o caminho que a energia
-                percorre desde sua origem até o descarte final dos produtos
-              </p>
-              <p class="text-muted mb-4">
-                Com base nas Informações inseridas, a calculadora oferece
-                <b>dicas personalizadas</b> para reduzir esse consumo e
-                minimizar danos ao meio ambiente. Assim ela deixa de ser uma
-                ferramenta de cálculo e se torna uma ponte para um
-                <b>novo lifestyle</b> - mais consiente, equilibrado e
-                responsável
-              </p>
-              <p class="text-muted mb-4">
-                Integrar a calculadora de emergia à sua rotina significa
-                despertar para um novo olhar sobre o consumo e as escolhas
-                diárias. Significa assumir o controle de sua pegada ecológica e
-                fazer parte de uma geração que entende que sustentabilidade
-                começa dentro de casa - e se reflete no mundo inteiro.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+    integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+    crossorigin="anonymous"></script>
+</body>
 
-      <!-- Calculadora -->
-      <section>
-        <div class="container py-5">
-          <div
-            class="bg-white rounded-4 shadow p-5 mx-auto"
-            style="max-width: 500px"
-          >
-            <h3 class="text-success fw-bold mb-4 text-center">
-              Calculadora de Emergia
-            </h3>
-            <form id="form-calculadora">
-              <div class="mb-3">
-                <label for="equipamento" class="form-label"
-                  >Escolha o equipamento:</label
-                >
-                <select class="form-select" id="equipamento" required>
-                  <option value="">Selecione</option>
-                  <!-- Opções serão carregadas dinamicamente -->
-                </select>
-              </div>
-              <div class="mb-3">
-                <label for="tempo" class="form-label"
-                  >Tempo de uso diário (em horas):</label
-                >
-                <input
-                  type="number"
-                  class="form-control"
-                  id="tempo"
-                  placeholder="Ex: 6"
-                  min="0"
-                  required
-                />
-              </div>
-              <button type="submit" class="btn btn-success w-100">
-                Calcular
-              </button>
-            </form>
-
-            <div class="resultado mt-5" id="resultado" style="display: none">
-              <h5 class="fw-bold text-success">Resultado:</h5>
-              <p id="resumo"></p>
-              <h6 class="fw-bold mt-4">Dicas Sustentáveis:</h6>
-              <ul id="dicas" class="text-muted"></ul>
-            </div>
-          </div>
-        </div>
-
-        <script>
-          let dadosEquipamentos = [];
-
-          fetch("./Dados/Dados.json")
-            .then((res) => res.json())
-            .then((dados) => {
-              dadosEquipamentos = dados;
-
-              const selectEquipamento = document.getElementById("equipamento");
-
-              dados.forEach((item) => {
-                const option = document.createElement("option");
-                option.value = item.nome.toLowerCase().replace(/\s+/g, "-");
-                option.textContent = item.nome;
-                selectEquipamento.appendChild(option);
-              });
-            });
-
-          document
-            .getElementById("form-calculadora")
-            .addEventListener("submit", function (e) {
-              e.preventDefault();
-
-              const equipamentoSelecionado =
-                document.getElementById("equipamento").value;
-              const horas = parseFloat(document.getElementById("tempo").value);
-
-              const equipamento = dadosEquipamentos.find(
-                (item) =>
-                  item.nome.toLowerCase().replace(/\s+/g, "-") ===
-                  equipamentoSelecionado
-              );
-
-              if (!equipamento) {
-                alert("Equipamento não encontrado!");
-                return;
-              }
-
-              const totalEmergia = equipamento.emergia_por_hora_sej * horas;
-
-              const resumoTexto = `Você usa o seu <b>${
-                equipamento.nome
-              }</b> por <b>${horas}h/dia</b>, o que equivale a um consumo estimado de <b>${totalEmergia.toLocaleString()} sej/dia</b>. Essa energia representa o impacto de todas as etapas do ciclo de vida do equipamento: produção, transporte, uso e descarte.`;
-
-              document.getElementById("resumo").innerHTML = resumoTexto;
-
-              const listaDicas = document.getElementById("dicas");
-              listaDicas.innerHTML = "";
-              const li = document.createElement("li");
-              li.textContent = equipamento.dica;
-              listaDicas.appendChild(li);
-
-              document.getElementById("resultado").style.display = "block";
-            });
-        </script>
-      </section>
-
-      <!-- Footer -->
-      <footer class="bg-dark text-white pt-5 pb-4">
-        <div class="container">
-          <div class="row">
-            <!-- Formulário de Contato -->
-            <div class="col-md-6 mb-4">
-              <h5 class="mb-3">Contate-nos</h5>
-              <form id="form-contato">
-                <div class="mb-3">
-                  <label for="nome" class="form-label">Nome</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nome"
-                    placeholder="Seu nome"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">E-mail</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="mensagem" class="form-label">Mensagem</label>
-                  <textarea
-                    class="form-control"
-                    id="mensagem"
-                    rows="3"
-                    placeholder="Digite sua mensagem"
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-success">Enviar</button>
-              </form>
-            </div>
-
-            <!-- Informações do footer -->
-            <div class="col-md-6 mb-4">
-              <h5 class="mb-3">EcoBalanço</h5>
-              <p>
-                Construindo um futuro mais limpo e consciente com pequenas ações
-                que fazem grandes diferenças.
-              </p>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="text-white text-decoration-none"
-                    >Política de Privacidade</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-white text-decoration-none"
-                    >Termos de Uso</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="text-white text-decoration-none"
-                    >Acessibilidade</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <hr class="bg-white" />
-
-          <div class="text-center">
-            <p class="mb-0">
-              &copy; 2025 EcoBalanço. Todos os direitos reservados.
-            </p>
-          </div>
-        </div>
-
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            // Inicializa o EmailJS com a sua API Key
-            emailjs.init("vRAH9FcS44mB2e93F"); // Substitua pela sua API Key
-
-            // Captura o envio do formulário
-            document
-              .getElementById("form-contato")
-              .addEventListener("submit", function (e) {
-                e.preventDefault(); // Evita o envio padrão do formulário
-
-                // Captura os dados do formulário
-                const nome = document.getElementById("nome").value;
-                const email = document.getElementById("email").value;
-                const mensagem = document.getElementById("mensagem").value;
-
-                // Envia os dados para o EmailJS
-                emailjs
-                  .send("service_ngrav18", "template_g2vv68m", {
-                    nome: nome,
-                    email: email,
-                    mensagem: mensagem,
-                  })
-                  .then(
-                    function (response) {
-                      alert("Mensagem enviada com sucesso!");
-                    },
-                    function (error) {
-                      alert("Erro ao enviar a mensagem: " + error);
-                    }
-                  );
-              });
-          });
-        </script>
-      </footer>
-      <!-- Assinaturas -->
-    </main>
-    <!-- js -->
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
-      integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
-      crossorigin="anonymous"
-    ></script>
-  </body>
 </html>

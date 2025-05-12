@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Envia os dados para o EmailJS
       emailjs
-        .send("service_ngrav18", "template_g2vv68m", {
+        .send("ecobalanco_service", "ecobalanco_template", {
           nome: nome,
           email: email,
           mensagem: mensagem,
@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Mensagem enviada com sucesso!");
           },
           function (error) {
-            alert("Erro ao enviar a mensagem: " + error);
+            console.error("Erro ao enviar a mensagem:", error);
+            alert("Erro ao enviar a mensagem: " + (error.text || JSON.stringify(error)));
           }
         );
     });

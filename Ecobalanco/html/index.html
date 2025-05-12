@@ -10,6 +10,9 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="pages/Js/email.js"></script>
   </head>
 
   <body>
@@ -295,7 +298,7 @@
             <!-- Formulário de Contato -->
             <div class="col-md-6 mb-4">
               <h5 class="mb-3">Contate-nos</h5>
-              <form>
+              <form id="form-contato">
                 <div class="mb-3">
                   <label for="nome" class="form-label">Nome</label>
                   <input
